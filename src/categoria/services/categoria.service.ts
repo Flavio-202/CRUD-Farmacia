@@ -17,6 +17,9 @@ export class CategoriaService {
   async findById(id: number): Promise<Categoria> {
     const categoria = await this.categoriaRepository.findOne({
       where: { id },
+      relations: {
+        produto: true,
+    }
     });
     if (!categoria)
       throw new HttpException('Categoria não encontrada!', HttpStatus.NOT_FOUND);
@@ -27,6 +30,9 @@ export class CategoriaService {
     return await this.categoriaRepository.find({
       where: {
         tipo: ILike(`%${tipo}%`),
+      },
+      relations: {
+        produto: true,
       },
     });
   }
