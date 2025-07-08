@@ -8,9 +8,9 @@ export class Categoria {
 
   @IsNotEmpty()
   @Column({ length: 500, nullable: false })
-  descricao: string;
+  tipo: string;
 
   @IsNotEmpty()
-  @Column({ type: 'boolean', nullable: false })
-  desconto: boolean;
+  @Column({ length: 5000, nullable: false })
+  descricao: string;
 }
