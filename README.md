@@ -1,67 +1,69 @@
-# 📦 FarmaHub (Projeto Acadêmico)
+<h1>📦 FarmaHub (Projeto Acadêmico)</h1>
 
-Este é um projeto **acadêmico** desenvolvido durante o bootcamp da Generation Brasil, sem fins comerciais.  
-O objetivo é criar uma **API Rest** para gerenciar produtos e categorias de uma farmácia virtual.
+<p>Projeto desenvolvido durante o bootcamp da Generation Brasil com objetivo de criar uma <strong>API Rest</strong> para gerenciar produtos e categorias de uma farmácia virtual, seguindo arquitetura <strong>MVC (Model-View-Controller)</strong> e utilizando <strong>TypeORM</strong> para acesso ao banco de dados relacional. O projeto também utiliza <strong>ESLint</strong> para manter a padronização e qualidade do código.</p>
 
----
+<hr>
 
-## 🚀 Tecnologias utilizadas
-- **NestJS** – framework Node.js para construção de APIs
-- **TypeScript**
-- **TypeORM** – para conexão e mapeamento com banco de dados MySQL
-- **MySQL** – banco de dados relacional
-- **Class-validator** – para validação dos dados
-- **Insomnia** – para realizar testes das rotas HTTP
+<h2>🚀 Tecnologias utilizadas</h2>
 
----
+<p align="left">
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeORM-FF5733?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Insomnia-4000BF?style=for-the-badge&logo=insomnia&logoColor=white"/>
+</p>
 
-## 📂 Funcionalidades
-- Cadastro, consulta, atualização e exclusão de **categorias**
-- Cadastro, consulta, atualização e exclusão de **produtos**
-- Relacionamento entre produtos e categorias
-- Validação de dados
+<hr>
 
----
+<h2>📂 Funcionalidades</h2>
 
-## ⚙️ Como rodar o projeto localmente
+<ul>
+  <li>Cadastro, consulta, atualização e exclusão de <strong>categorias</strong></li>
+  <li>Cadastro, consulta, atualização e exclusão de <strong>produtos</strong></li>
+  <li>Relacionamento entre produtos e categorias</li>
+  <li>Validação de dados</li>
+</ul>
 
-### Pré-requisitos
-- [Node.js](https://nodejs.org/)
-- [Nest CLI](https://docs.nestjs.com/cli/overview):  
-  ```bash
-  npm install -g @nestjs/cli
+<hr>
 
-Banco de dados MySQL instalado e rodando
+<h2>⚙️ Pré-requisitos</h2>
 
+<p>Antes de começar, certifique-se de ter instalado:</p>
 
+<ul>
+  <li><a href="https://nodejs.org/">Node.js</a> (recomendado: versão 18 ou superior)</li>
+  <li><a href="https://www.npmjs.com/">npm</a></li>
+  <li>Banco de dados: MySQL / PostgreSQL / SQLite</li>
+</ul>
 
----
+<hr>
 
-Passo a passo
+<h2>📌 Passo a passo</h2>
 
-1. Clone o repositório
+<h3>1️⃣ Clone o repositório</h3>
 
-
-
-git clone https://github.com/Flavio-202/CRUD-Farmacia.git
+<pre><code>git clone https://github.com/Flavio-202/CRUD-Farmacia.git
 cd CRUD-Farmacia
+</code></pre>
 
-2. Instale as dependências
+<hr>
 
+<h3>2️⃣ Instale as dependências</h3>
 
+<pre><code>npm install
+</code></pre>
 
-npm install
+<hr>
 
-3. Configure o banco de dados
+<h3>3️⃣ Configure o banco de dados</h3>
 
+<p>Crie um banco de dados chamado <code>db_farmahub</code></p>
 
+<p>Verifique se o arquivo <code>app.module.ts</code> está configurado assim:</p>
 
-Crie um banco de dados chamado db_farmahub no MySQL
-
-No projeto, confira se o arquivo app.module.ts está configurado com:
-
-
-TypeOrmModule.forRoot({
+<pre><code>TypeOrmModule.forRoot({
   type: 'mysql',
   host: 'localhost',
   port: 3306,
@@ -71,66 +73,51 @@ TypeOrmModule.forRoot({
   entities: [Produto, Categoria],
   synchronize: true,
 }),
+</code></pre>
 
-(Altere usuário e senha conforme seu ambiente)
+<p><em>(Altere usuário e senha conforme o seu ambiente)</em></p>
 
+<hr>
 
----
+<h3>4️⃣ Rode o projeto</h3>
 
-4. Rode o projeto
+<pre><code>npm run start:dev
+</code></pre>
 
+<p>O servidor estará disponível em:</p>
 
+<pre><code>http://localhost:4000
+</code></pre>
 
-npm run start
+<hr>
 
-O servidor estará rodando em:
+<h2>🧪 Testes</h2>
 
-http://localhost:4000
+<p>Use o <strong>Insomnia</strong> ou outro cliente REST para testar as rotas:</p>
 
+<ul>
+  <li><code>GET</code>, <code>POST</code>, <code>PUT</code> e <code>DELETE</code> de produtos</li>
+  <li><code>GET</code>, <code>POST</code>, <code>PUT</code> e <code>DELETE</code> de categorias</li>
+</ul>
 
----
+<hr>
 
-✅ Testes
+<h2>📌 Observações</h2>
 
-Use o Insomnia ou outro cliente REST para testar as rotas.
-Você pode criar requisições de exemplo para:
+<ul>
+  <li>Este projeto foi desenvolvido apenas para fins educacionais.</li>
+  <li>Desenvolvido durante o bootcamp <strong>Full Stack JavaScript</strong> da Generation Brasil.</li>
+</ul>
 
-GET, POST, PUT e DELETE de produtos
+<hr>
 
-GET, POST, PUT e DELETE de categorias
+<h2>📄 Licença</h2>
 
+<p>Este projeto está sob a licença UNLICENSED (projeto acadêmico ou privado).</p>
 
-(Você pode também compartilhar um print do Insomnia rodando no README ou no LinkedIn!)
+<hr>
 
+<h2>👨‍💻 Desenvolvido por</h2>
 
----
-
-📌 Observações
-
-Este projeto foi desenvolvido apenas para fins educacionais.
-
-Não está pronto para produção.
-
-Desenvolvido durante o bootcamp Full Stack JavaScript da Generation Brasil.
-
-
-
----
-
-📄 Licença
-
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
-
-
----
-
-👨‍💻 Desenvolvido por
-
-Flavio Teixeira Aguilar da Silva
-
-
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
-
-
+<p><a href="https://www.linkedin.com/in/flavio-aguilar-477484237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+Flavio Aguilar</a></p>
