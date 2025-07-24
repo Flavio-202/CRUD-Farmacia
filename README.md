@@ -100,6 +100,33 @@ cd CRUD-Farmacia
   <li><code>GET</code>, <code>POST</code>, <code>PUT</code> e <code>DELETE</code> de categorias</li>
 </ul>
 
+
+<h2>🧪 Exemplos de JSON para testar no Insomnia</h2>
+
+<h3>📌 Cadastrar categoria – POST</h3>
+<p><code>http://localhost:4000/categorias</code></p>
+
+<pre><code>{
+  "tipo": "EX: analgésico, anti-inflamatório ...",
+  "descricao": "..."
+}
+</code></pre>
+
+<h3>📌 Cadastrar produto – POST</h3>
+<p><code>http://localhost:4000/produtos</code></p>
+
+<pre><code>{
+  "nome": "nome do produto",
+  "fabricante": "Nome do fabricante",
+  "validade": "ano-mês-dia",
+  "preço": 00.00,
+  "categoria": { 
+  "id": 1 
+  }
+}
+</code></pre>
+
+
 <hr>
 
 <h2>📌 Observações</h2>
